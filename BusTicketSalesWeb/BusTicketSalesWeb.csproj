@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,6 +216,30 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Content\public\account-circle.svg" />
+    <Content Include="Content\public\bus%402x.png" />
+    <Content Include="Content\public\bus-size%402x.png" />
+    <Content Include="Content\public\call%402x.png" />
+    <Content Include="Content\public\downloadappstore%402x.png" />
+    <Content Include="Content\public\downloadggplay%402x.png" />
+    <Content Include="Content\public\facebook%402x.png" />
+    <Content Include="Content\public\icon-vxr-full-2-1%402x.png" />
+    <Content Include="Content\public\instagram-circle%402x.png" />
+    <Content Include="Content\public\leaderboard-1%402x.png" />
+    <Content Include="Content\public\logout.svg" />
+    <Content Include="Content\public\phone%402x.png" />
+    <Content Include="Content\public\rectangle-12.svg" />
+    <Content Include="Content\public\review.svg" />
+    <Content Include="Content\public\ticket.svg" />
+    <Content Include="Content\public\tiktok%402x.png" />
+    <Content Include="Content\public\travel-agency%402x.png" />
+    <Content Include="Content\public\vector.svg" />
+    <Content Include="Content\public\vector1.svg" />
+    <Content Include="Content\public\vector2.svg" />
+    <Content Include="Content\public\vector3.svg" />
+    <Content Include="Content\public\visa%402x.png" />
+    <Content Include="Content\public\voucher%402x.png" />
+    <Content Include="Content\public\world-map%402x.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -228,6 +253,7 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\public\img-01.webp" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -253,6 +279,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Tickets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
