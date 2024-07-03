@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d64c8b77bab9414ba424cded19b1b446" Name="Diagram1">
+      <Diagram DiagramId="e21d3e857a6e4d32a14b8a1c01bb0180" Name="Diagram1">
         <EntityTypeShape EntityType="QLBANVEXEModel.ChuongTrinhKhuyenMai" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBANVEXEModel.ChuyenXe" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBANVEXEModel.Ghe" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
@@ -20,7 +20,7 @@
         <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaCT__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="QLBANVEXEModel.FK__ChuyenXe__MaTuye__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaChuyen__5812160E" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYEN__MaChu__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__44FF419A" ManuallyRouted="false" />
         <AssociationConnector Association="QLBANVEXEModel.FK__Ghe__MaXe__3B75D760" ManuallyRouted="false" />
         <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaGhe__571DF1D5" ManuallyRouted="false" />
         <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaKH__52593CB8" ManuallyRouted="false" />
