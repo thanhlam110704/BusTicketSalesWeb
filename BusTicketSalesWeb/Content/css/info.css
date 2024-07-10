@@ -1,0 +1,82 @@
+.menu-info{
+    margin-bottom:20px;
+
+}
+.box-menu-info {
+    border-radius: 8px;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 16px;
+    width: 200px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    box-sizing:border-box;
+    height:70%;
+}
+a {
+    color: #1890ff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    color:black;
+}
+body {
+    background-color: white;
+    font-feature-settings: normal !important;
+    font-variant: normal !important;
+    color: rgba(0, 0, 0, .65);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    line-height: 1.5;
+    background-color: #fff;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+}
+.ant-input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, .65);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.iDkvAV {
+    margin-bottom: 16px;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.iDkvAV {
+    margin-bottom: 16px;
+}
+.geRRnr {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgb(192, 192, 192);
+    height:60px;
+}
+
+
