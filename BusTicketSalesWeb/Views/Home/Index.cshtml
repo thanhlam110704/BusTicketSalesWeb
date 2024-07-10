@@ -1,33 +1,266 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/inHome_index.css" />
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+</head>
+<body>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+
+
+    <div class="leader-board">
+        <div class="background-images">
+            <img src="../Content/public/leaderboard-1@2x.png" alt="Image 1">
+            <img src="../Content/public/banner1.png" alt="Image 2">
+            <img src="../Content/public/leaderboard-1@2x.png" alt="Image 3">
+            <img src="../Content/public/banner1.png" alt="Image 4">
+        </div>
+        <div class="title">
+            Vexere - Cam kết hoàn 150% nếu nhà xe không cung cấp dịch vụ vận chuyển
+        </div>
+        <div class="container search">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-5 noidi">
+                            <div class="text-diadiem">Nơi Đi</div>
+                            <select class="select-diadiem-noidi">
+                                <option value="HN">Hà Nội</option>
+                                <option value="TPHCM">TPHCM</option>
+                                <option value="DaNang">Đà Nẵng</option>
+                            </select>
+                        </div>
+                        <div class="col-5 noiden">
+                            <div class="text-diadiem">Nơi Đến</div>
+                            <select class="select-diadiem-noiden">
+                                <option value="HN">Hà Nội</option>
+                                <option value="TPHCM">TPHCM</option>
+                                <option value="DaNang">Đà Nẵng</option>
+                            </select>
+                        </div>
+                        <div class="col-2 btn btn-warning" style="height:50px;margin-top:22px;align-content:center;border-radius:10px">
+                            <div class="timve">
+                                Tìm kiếm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
     </div>
-</main>
+    <div class="container">
+        <h4 class="popular">Tuyến đường phổ biến </h4>
+        <div class="row list-popular">
+            <div class="ant-carousel">
+                <div class="slick-list">
+                    <div class="slick-track" style="width: 1960px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 cclBUT">
+                                        <div class="card-content-title">Sài Gòn - Nha Trang</div>
+                                        <div class="card-content-fare">
+                                            Từ 200.000đ
+                                            <div class="card-content-fare-origin">320.000đ</div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA ">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/24/img_hero.png" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/24/img_hero.png" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 bvkSHW">
+                                        <div class="card-content-title">Hà Nội - Hải Phòng</div>
+                                        <div class="card-content-fare">
+                                            Từ 100.000đ
+                                            <div class="card-content-fare-origin">320.000đ</div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div data-index="2" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/3/img_hero.png" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 epxwNO">
+                                        <div class="card-content-title">Sài Gòn - Đà Lạt  </div>
+                                        <div class="card-content-fare">
+                                            Từ 160.000đ
+                                            <div class="card-content-fare-origin">320.000đ</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div data-index="3" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA ">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/22/img_hero.png" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 bLhVej">
+                                        <div class="card-content-title">Sài Gòn - Phan Thiết  </div>
+                                        <div class="card-content-fare">
+                                            Từ 150.000đ
+                                            <div class="card-content-fare-origin">320.000đ</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div data-index="4" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/25/img_hero.png" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 bvkSHW">
+                                        <div class="card-content-title">Sài Gòn - Phan Rang </div>
+                                        <div class="card-content-fare">
+                                            Từ 180.000đ
+                                            <div class="card-content-fare-origin">320.000đ</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div data-index="5" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/20/img_card.png" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 bNhMQq">
+                                        <div class="card-content-title">Sài Gòn - Vũng Tàu  </div>
+                                        <div class="card-content-fare">
+                                            Từ 150.000đ
+                                            <div class="card-content-fare-origin">320.000đ</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div data-index="6" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/21/img_card.png" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 qYPaV">
+                                        <div class="card-content-title">Sài Gòn - Nha Trang </div>
+                                        <div class="card-content-fare">
+                                            Từ 200.000đ
+                                            <div class="card-content-fare-origin">320.000đ</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div data-index="7" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 245px;">
+                            <div class="a-dcrt-none">
+                                <a tabindex="-1" style="width:100%;display:inline-block" class="PopularRoute__Card-sc-3v0dez-2 hFSNuA">
+                                    <div class="image-container">
+                                        <img class=" ls-is-cached lazyloaded" data-src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/5/img_hero.png?v1" src="https://f1e425bd6cd9ac6.cmccloud.com.vn/cms-tool/destination/images/27/img_hero.png" alt="item-popular-route" width="233" height="116">
+                                    </div>
+                                    <div selected="" class="PopularRoute__CartContent-sc-3v0dez-3 hcKCQC">
+                                        <div class="card-content-title">Nha Trang  - Sài Gòn</div>
+                                        <div class="card-content-fare-origin">320.000đ</div>
+                                        <div class="card-content-fare">Từ 200.000đ</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <h4 class="title-4" style="text-align:center">HỆ THỐNG VÉ XE KHÁCH LỚN NHẤT VIỆT NAM</h4>
+    <br />
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="shadow">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="~/Content/public/world-map@2x.png" />
+                        </div>
+                        <div class="col-8 fs-5">
+                            <h6 class="mt-2  fw-bolder ">5000+</h6>
+                            <a>Tuyến đường</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="shadow">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="~/Content/public/bus@2x.png" />
+                        </div>
+                        <div class="col-8 fs-5">
+                            <h6 class="mt-2  fw-bolder ">2000+</h6>
+                            <a>Nhà xe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="shadow">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="~/Content/public/travel-agency@2x.png" />
+                        </div>
+                        <div class="col-8 fs-5">
+                            <h6 class="mt-2  fw-bolder ">5000+</h6>
+                            <a>Đại lý</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="shadow">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="~/Content/public/bus-size@2x.png" />
+                        </div>
+                        <div class="col-8 fs-5">
+                            <h6 class="mt-2  fw-bolder ">4000+</h6>
+                            <a>Bến xe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <br />
+</body>
+</html>
