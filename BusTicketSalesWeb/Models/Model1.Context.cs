@@ -15,10 +15,10 @@ namespace BusTicketSalesWeb.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class QLBANVEXEEntities2 : DbContext
+    public partial class QLBANVEXEEntities3 : DbContext
     {
-        public QLBANVEXEEntities2()
-            : base("name=QLBANVEXEEntities2")
+        public QLBANVEXEEntities3()
+            : base("name=QLBANVEXEEntities3")
         {
         }
     

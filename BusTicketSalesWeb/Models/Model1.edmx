@@ -254,7 +254,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__XE_CHUYENX__MaXe__44FF419A">
+        <Association Name="FK__XE_CHUYEN__MaChu__44FF419A">
           <End Role="ChuyenXe" Type="Self.ChuyenXe" Multiplicity="1" />
           <End Role="XE_CHUYENXE" Type="Self.XE_CHUYENXE" Multiplicity="*" />
           <ReferentialConstraint>
@@ -526,7 +526,7 @@
             <End Role="HoaDon" EntitySet="HoaDon" />
             <End Role="VeXe" EntitySet="VeXe" />
           </AssociationSet>
-          <AssociationSet Name="FK__XE_CHUYENX__MaXe__44FF419A" Association="Self.FK__XE_CHUYENX__MaXe__44FF419A">
+          <AssociationSet Name="FK__XE_CHUYEN__MaChu__44FF419A" Association="Self.FK__XE_CHUYEN__MaChu__44FF419A">
             <End Role="ChuyenXe" EntitySet="ChuyenXe" />
             <End Role="XE_CHUYENXE" EntitySet="XE_CHUYENXE" />
           </AssociationSet>
@@ -563,7 +563,7 @@
           <Property Name="MaTuyen" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
           <NavigationProperty Name="TuyenXe" Relationship="Self.FK__ChuyenXe__MaTuye__4222D4EF" FromRole="ChuyenXe" ToRole="TuyenXe" />
           <NavigationProperty Name="VeXes" Relationship="Self.FK__VeXe__MaChuyen__5812160E" FromRole="ChuyenXe" ToRole="VeXe" />
-          <NavigationProperty Name="XE_CHUYENXE" Relationship="Self.FK__XE_CHUYENX__MaXe__44FF419A" FromRole="ChuyenXe" ToRole="XE_CHUYENXE" />
+          <NavigationProperty Name="XE_CHUYENXE" Relationship="Self.FK__XE_CHUYEN__MaChu__44FF419A" FromRole="ChuyenXe" ToRole="XE_CHUYENXE" />
         </EntityType>
         <EntityType Name="Ghe">
           <Key>
@@ -680,7 +680,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaChuyen" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="MaXe" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="ChuyenXe" Relationship="Self.FK__XE_CHUYENX__MaXe__44FF419A" FromRole="XE_CHUYENXE" ToRole="ChuyenXe" />
+          <NavigationProperty Name="ChuyenXe" Relationship="Self.FK__XE_CHUYEN__MaChu__44FF419A" FromRole="XE_CHUYENXE" ToRole="ChuyenXe" />
           <NavigationProperty Name="Xe" Relationship="Self.FK__XE_CHUYENX__MaXe__45F365D3" FromRole="XE_CHUYENXE" ToRole="Xe" />
         </EntityType>
         <Association Name="FK__HoaDon__MaCT__534D60F1">
@@ -719,7 +719,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__XE_CHUYENX__MaXe__44FF419A">
+        <Association Name="FK__XE_CHUYEN__MaChu__44FF419A">
           <End Role="ChuyenXe" Type="Self.ChuyenXe" Multiplicity="1" />
           <End Role="XE_CHUYENXE" Type="Self.XE_CHUYENXE" Multiplicity="*" />
           <ReferentialConstraint>
@@ -839,7 +839,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLBANVEXEEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLBANVEXEEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ChuongTrinhKhuyenMais" EntityType="Self.ChuongTrinhKhuyenMai" />
           <EntitySet Name="ChuyenXes" EntityType="Self.ChuyenXe" />
           <EntitySet Name="Ghes" EntityType="Self.Ghe" />
@@ -864,7 +864,7 @@
             <End Role="ChuyenXe" EntitySet="ChuyenXes" />
             <End Role="VeXe" EntitySet="VeXes" />
           </AssociationSet>
-          <AssociationSet Name="FK__XE_CHUYENX__MaXe__44FF419A" Association="Self.FK__XE_CHUYENX__MaXe__44FF419A">
+          <AssociationSet Name="FK__XE_CHUYEN__MaChu__44FF419A" Association="Self.FK__XE_CHUYEN__MaChu__44FF419A">
             <End Role="ChuyenXe" EntitySet="ChuyenXes" />
             <End Role="XE_CHUYENXE" EntitySet="XE_CHUYENXE" />
           </AssociationSet>
@@ -1101,7 +1101,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLBANVEXEModelStoreContainer" CdmEntityContainer="QLBANVEXEEntities2">
+        <EntityContainerMapping StorageEntityContainer="QLBANVEXEModelStoreContainer" CdmEntityContainer="QLBANVEXEEntities3">
           <EntitySetMapping Name="ChuongTrinhKhuyenMais">
             <EntityTypeMapping TypeName="QLBANVEXEModel.ChuongTrinhKhuyenMai">
               <MappingFragment StoreEntitySet="ChuongTrinhKhuyenMai">
