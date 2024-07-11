@@ -1,0 +1,77 @@
+﻿@model BusTicketSalesWeb.Models.TaiKhoan
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (!string.IsNullOrEmpty(ViewBag.RegistrationSuccessMessage))
+{
+    <div class="alert alert-success">
+        @ViewBag.RegistrationSuccessMessage
+    </div>
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="~/Login/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/Content/css/login.css">
+    <link href="~/Content/css/grid.css" rel="stylesheet" />
+</head>
+<style>
+    a{
+        font-size: 16px;
+    }
+</style>
+<body>
+    <!-- Sign up form -->
+    <div class="main">
+        <section class="signup">
+            <div class="container" id="signform">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Đăng ký tài khoản</h2>
+                        @using (Html.BeginForm())
+                        {
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                @Html.TextBoxFor(model => model.Email, new { placeholder = "Nhập email của bạn" })
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                                @Html.EditorFor(model => model.Sdt, new { htmlAttributes = new { placeholder = "Nhập số điện thoại của bạn" } })
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                @Html.PasswordFor(model => model.MatKhau, new { placeholder = "Nhập mật khẩu của bạn", maxlength = "25" })
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword"><i class="zmdi zmdi-lock-outline"></i></label>
+                                @Html.Password("confirmPassword", null, new { placeholder = "Xác nhận mật khẩu của bạn", maxlength = "25" })
+                            </div>
+                            <div>
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            </div>
+                            <a href="~/TaiKhoan/Login" class="text-center">Bạn đã có tài khoản? Đăng nhập ngay!</a>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Đăng ký" />
+                            </div>
+                        }
+
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="~/Content/public/banner.jpg" alt="sing up image"></figure>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<script src="~/Login/vendor/jquery/jquery.min.js"></script>
+<script src="~/Login/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bcrypt.js/2.4.3/bcrypt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
