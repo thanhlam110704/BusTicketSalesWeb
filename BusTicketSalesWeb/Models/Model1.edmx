@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QLBANVEXEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QLBANVEXEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChuongTrinhKhuyenMai">
           <Key>
             <PropertyRef Name="MaCT" />
@@ -535,7 +535,8 @@
             <End Role="XE_CHUYENXE" EntitySet="XE_CHUYENXE" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLBANVEXEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -904,40 +905,40 @@
             <End Role="XE_CHUYENXE" EntitySet="XE_CHUYENXE" />
           </AssociationSet>
           <FunctionImport Name="sp_DeleteChuongTrinhKhuyenMai">
-          <Parameter Name="MaCT" Mode="In" Type="String" />
+            <Parameter Name="MaCT" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteChuyenXe">
-          <Parameter Name="MaChuyen" Mode="In" Type="String" />
+            <Parameter Name="MaChuyen" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteGhe">
-          <Parameter Name="MaGhe" Mode="In" Type="String" />
+            <Parameter Name="MaGhe" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteHoaDon">
-          <Parameter Name="MaHoaDon" Mode="In" Type="String" />
+            <Parameter Name="MaHoaDon" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteKhachHang">
-          <Parameter Name="MaKH" Mode="In" Type="Int32" />
+            <Parameter Name="MaKH" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteNhanVien">
-          <Parameter Name="MaNV" Mode="In" Type="Int32" />
+            <Parameter Name="MaNV" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_DeletePhongBan">
-          <Parameter Name="MaPB" Mode="In" Type="String" />
+            <Parameter Name="MaPB" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteTaiKhoan">
-          <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteTuyenXe">
-          <Parameter Name="MaTuyen" Mode="In" Type="String" />
+            <Parameter Name="MaTuyen" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteVeXe">
-          <Parameter Name="MaVe" Mode="In" Type="String" />
+            <Parameter Name="MaVe" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteXe">
-          <Parameter Name="MaXe" Mode="In" Type="String" />
+            <Parameter Name="MaXe" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_DeleteXE_CHUYENXE">
-          <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_InsertChuongTrinhKhuyenMai">
             <Parameter Name="MaCT" Mode="In" Type="String" />
