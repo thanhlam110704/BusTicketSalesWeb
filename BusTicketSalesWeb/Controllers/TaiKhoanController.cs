@@ -213,7 +213,7 @@ namespace BusTicketSalesWeb.Controllers
         private void SendEmail(string toEmail, string subject, string body)
         {
             var fromEmail = "ltthanh4104@gmail.com";
-            var fromPassword = "gxfv oxve dflr mhoj";
+            var fromPassword = "eckk eiwv lkqc oqpn";
             var fromDisplayName = "BusTicketSales";
 
             var smtpClient = new SmtpClient
