@@ -1,0 +1,104 @@
+﻿@model IEnumerable<BusTicketSalesWeb.Models.TuyenXe>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+@section CSS {
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Areas/admin/wwwroot/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        table th,
+        table td {
+            text-align: center;
+        }
+    </style>
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Tuyến xe</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/admin/">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active">Tuyến xe</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Thông tin tuyến xe</h3>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="input-group input-group-sm ml-auto" style="width: 185px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div style="margin:20px">
+                        <a href="/admin/ManageTrainRoute/Create" class="btn btn-outline-success">Tạo tuyến mới</a>
+                    </div>
+                    <table id="example2" class="table table-bordered table-hover" style="background-color: #f2edf3">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã tuyến</th>
+                                <th>Tên tuyến</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ var STT = 1; }
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="width:100px">
+                                        @Html.Raw(STT++)
+                                    </td>
+                                    <td style="width:150px">
+                                        @Html.DisplayFor(modelItem => item.MaTuyen)
+                                    </td>
+                                    <td style="width:150px">
+                                        @Html.DisplayFor(modelItem => item.TenTuyen)
+                                    </td>
+                                    
+                                    <td style="width:160px">
+                                        @Html.ActionLink("Cập nhật", "Edit", new { id = item.MaTuyen }, new { @class = "btn btn-warning btn-sm", @style = "color:white;font-weight:500" })
+                                        @Html.ActionLink("Xóa", "Delete", new { id = item.MaTuyen }, new { @class = "btn btn-danger btn-sm", @style = "color:white;font-weight:500" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.container-fluid -->
+<!-- /.content -->
+
+@section Scripts {
+    <!-- DataTables -->
+    <script src="~/Areas/admin/wwwroot/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/Areas/admin/wwwroot/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
+    <!-- page script -->
+
+}

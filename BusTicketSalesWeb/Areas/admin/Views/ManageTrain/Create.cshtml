@@ -1,0 +1,80 @@
+﻿@model BusTicketSalesWeb.Areas.ViewModel.TrainVM
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/css/info.css" />
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Chuyến xe</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/admin/">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active">Chuyến xe</li>
+                    <li class="breadcrumb-item active">Tạo mới</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <div class="main-box title-i">
+            <hr />
+            <div class="main-box-1">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MaChuyen, "Mã chuyến", htmlAttributes: new { @class = "control-label col-md-2 title-input" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.MaChuyen, new { htmlAttributes = new { @class = "form-control ant-input" } })
+                        @Html.ValidationMessageFor(model => model.MaChuyen, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TenChuyen, "Tên chuyến", htmlAttributes: new { @class = "control-label col-md-2 title-input" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.TenChuyen, new { htmlAttributes = new { @class = "form-control ant-input" } })
+                        @Html.ValidationMessageFor(model => model.TenChuyen, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NgayGioKhoiHanh, "Ngày khởi hành", htmlAttributes: new { @class = "control-label col-md-2 title-input" })
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.NgayGioKhoiHanh, new { htmlAttributes = new { @class = "form-control ant-input", @type = "date" } })
+                        @Html.ValidationMessageFor(model => model.NgayGioKhoiHanh, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MaXe, "Xe", htmlAttributes: new { @class = "control-label col-md-2 title-input" })
+                    <div class="col-md-12">
+                        @Html.DropDownList("MaXe", (SelectList)ViewBag.MaXe, "Chọn xe", new { @class = "form-control ant-input" })
+                        @Html.ValidationMessageFor(model => model.MaXe, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MaTuyen, "Tuyến đi", htmlAttributes: new { @class = "control-label col-md-2 title-input" })
+                    <div class="col-md-12">
+                        @Html.DropDownList("MaTuyen", (SelectList)ViewBag.MaTuyen, new { @class = "form-control ant-input" })
+                        @Html.ValidationMessageFor(model => model.MaTuyen, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-12" style="text-align:center">
+                        <input style="font-weight:500;width:180px;height:45px;margin-top:15px;border-radius:15px" type="submit" value="Lưu thông tin" class="btn btn-warning btn-sm" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
