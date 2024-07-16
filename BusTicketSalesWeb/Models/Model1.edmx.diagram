@@ -4,7 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3d8bf0c7d57f4c21aef16cb6e9e2526f" Name="Diagram1">
+      <Diagram DiagramId="4adb92032c5f4ff9bb66582033335740" Name="Diagram1">
+      <Diagram DiagramId="397086bea43d450cad4f923a8d260a59" Name="Diagram1" ZoomLevel="86">
+      <Diagram DiagramId="397086bea43d450cad4f923a8d260a59" Name="Diagram1" ZoomLevel="86">
         <EntityTypeShape EntityType="QLBANVEXEModel.ChuongTrinhKhuyenMai" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBANVEXEModel.ChuyenXe" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBANVEXEModel.Ghe" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
@@ -15,21 +17,47 @@
         <EntityTypeShape EntityType="QLBANVEXEModel.TaiKhoan" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBANVEXEModel.TuyenXe" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="QLBANVEXEModel.VeXe" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBANVEXEModel.Xe" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLBANVEXEModel.XE_CHUYENXE" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaCT__656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__ChuyenXe__MaTuye__5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaChuyen__6A30C649" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__Ghe__MaXe__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaGhe__693CA210" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaKH__6477ECF3" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaNV__6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaHoaDon__68487DD7" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__KhachHang__Id__60A75C0F" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__Id__5CD6CB2B" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__MaPB__5DCAEF64" ManuallyRouted="false" />
-        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaCT__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__ChuyenXe__MaTuye__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaChuyen__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__Ghe__MaXe__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaGhe__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaKH__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaNV__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaHoaDon__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__KhachHang__Id__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__Id__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__MaPB__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaCT__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__ChuyenXe__MaTuye__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaChuyen__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYEN__MaChu__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__Ghe__MaXe__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaGhe__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaKH__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaNV__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaHoaDon__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__KhachHang__Id__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__Id__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__MaPB__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaCT__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__ChuyenXe__MaTuye__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaChuyen__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYEN__MaChu__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__Ghe__MaXe__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaGhe__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaKH__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__HoaDon__MaNV__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__VeXe__MaHoaDon__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__KhachHang__Id__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__Id__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__NhanVien__MaPB__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="QLBANVEXEModel.FK__XE_CHUYENX__MaXe__45F365D3" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
