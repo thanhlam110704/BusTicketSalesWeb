@@ -1,0 +1,120 @@
+﻿@model IEnumerable<BusTicketSalesWeb.Areas.ViewModel.TicketDetails>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+@section CSS {
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Areas/admin/wwwroot/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        table th,
+        table td {
+            text-align: center;
+        }
+    </style>
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Khách hàng</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/admin/">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active">Khách hàng</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Khách hàng</h3>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="input-group input-group-sm ml-auto" style="width: 185px;">
+                        <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    <table id="example2" class="table table-bordered table-hover" style="background-color: #f2edf3">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã vé</th>
+                                <th>Nơi đi - Nơi đến </th>
+                                <th>Thời gian</th>
+                                <th>Mã xe</th>
+                                <th>Trạng thái ghế</th>
+                                <th>Giá</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ var STT = 1; }
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="width:150px">
+                                        @Html.Raw(STT++)
+                                    </td>
+                                    <td style="width:150px">
+                                        @Html.DisplayFor(modelItem => item.MaVe)
+                                    </td>
+                                    <td style="text-align: start;width:250px">
+                                        @Html.DisplayFor(modelItem => item.TenTuyen)
+                                    </td>
+                                    <td style="text-align: start">
+                                        @Html.DisplayFor(modelItem => item.NgayGioKhoiHanh)
+                                    </td>
+                                    <td style="text-align: start">
+                                        @Html.DisplayFor(modelItem => item.MaXe)
+                                    </td>
+                                    <td style="text-align: start">
+                                        @if (item.TrangThai.HasValue)
+                                        {
+                                            <span>@(item.TrangThai.Value == 1 ? "Còn chỗ" : "Hết chỗ")</span>
+                                        }
+                                    </td>
+                                    <td style="text-align: start">
+                                        @Html.DisplayFor(modelItem => item.Gia )
+                                    </td>
+                                    <td style="width:200px">
+                                        @Html.ActionLink("Cập nhật", "EditCustomer", new { id = item.MaVe }, new { @class = "btn btn-warning btn-sm", @style = "color:white;font-weight:500" })
+                                        @Html.ActionLink("Xóa", "EditCustomer", new { id = item.MaVe }, new { @class = "btn btn-danger btn-sm", @style = "color:white;font-weight:500" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.container-fluid -->
+<!-- /.content -->
+
+@section Scripts {
+    <!-- DataTables -->
+    <script src="~/Areas/admin/wwwroot/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="~/Areas/admin/wwwroot/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
+    <!-- page script -->
+
+}

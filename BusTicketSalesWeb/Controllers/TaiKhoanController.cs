@@ -13,7 +13,7 @@ namespace BusTicketSalesWeb.Controllers
     public class TaiKhoanController : Controller
     {
         // GET: TaiKhoan
-        public QLBANVEXEEntities5 db = new QLBANVEXEEntities5();
+        public QLBANVEXEEntities db = new QLBANVEXEEntities();
         // GET: Account
        
 

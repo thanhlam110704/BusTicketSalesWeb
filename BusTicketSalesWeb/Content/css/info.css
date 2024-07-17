@@ -28,7 +28,7 @@ body {
     font-feature-settings: normal !important;
     font-variant: normal !important;
     color: rgba(0, 0, 0, .65);
-    font-size: 14px;
+    font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 1.5;
     background-color: #fff;
@@ -48,7 +48,7 @@ body {
     height: 32px;
     padding: 4px 11px;
     color: rgba(0, 0, 0, .65);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     background-color: #fff;
     background-image: none;
@@ -78,5 +78,60 @@ body {
     border-top: 1px solid rgb(192, 192, 192);
     height:60px;
 }
+.main-box {
+    margin: 0px auto;
+    /*    border: 2px solid white;*/
+    padding: 30px;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main-box-1 {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.ant-input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, .65);
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    height: 50px;
+    border-radius: 10px;
+}
+.title-input {
+    color: black;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.button {
+    color: white;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: green;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 
 
