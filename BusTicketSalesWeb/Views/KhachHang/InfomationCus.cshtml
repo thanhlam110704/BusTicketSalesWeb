@@ -1,0 +1,81 @@
+﻿@model BusTicketSalesWeb.Models.KhachHang
+
+@{
+    ViewBag.Title = "InfomationCus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/css/info.css" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+    .btn-primary {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+</style>
+<div style="min-height:100vh">
+    <div class="container">
+        <div style="margin-top:50px;justify-content:center;display:flex;gap:50px">
+            <div class="col-md-2 mb-4" style="margin-top:50px">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <img src="~/Content/public/account-circle.svg" class="me-2" />
+                        Thông tin tài khoản
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class='bx bxs-key me-2'></i>
+                        Đổi mật khẩu
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                <form method="post" asp-action="InfomationCus" asp-controller="KhachHang">
+                    @* Hidden field to send account_Id *@
+                    <input type="hidden" name="account_Id" value="@ViewBag.AccountId" />
+
+                    <div class="mb-3">
+                        <label class="form-label">Email<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" disabled readonly name="Email" value="@Model.TaiKhoan.Email">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Họ và tên<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="TenKH" value="@Model.TenKH">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Số điện thoại<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="TaiKhoan.Sdt" value="@Model.TaiKhoan.Sdt">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Ngày sinh</label>
+                        <input type="date" id="dateOfBirth" name="Ngay_Sinh" class="form-control" value="@Model.Ngay_Sinh.HasValue ? Model.Ngay_Sinh.Value.ToString(" yyyy-MM-dd") : "" ">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Giới tính</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="male" name="Gioi_Tinh" value="0" @(Model.Gioi_Tinh == 0 ? "checked" : "")>
+                                <label class="form-check-label" for="male">Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="female" name="Gioi_Tinh" value="1" @(Model.Gioi_Tinh == 1 ? "checked" : "")>
+                                <label class="form-check-label" for="female">Nữ</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            <span>Lưu</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -151,6 +151,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\TaiKhoanController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1914,7 +1915,6 @@
     <Content Include="Content\wwwroot\upload\img\movies\Picture2.jpg" />
     <Content Include="Content\wwwroot\upload\img\movies\Picture3.png" />
     <Content Include="Content\wwwroot\upload\img\movies\Picture4.png" />
-    <Content Include="Content\inHome_index.css" />
     <Content Include="Content\public\banner1.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -2224,7 +2224,6 @@
     <Content Include="Content\wwwroot\scss\_site-base.scss" />
     <Content Include="Content\wwwroot\scss\_site-blocks.scss" />
     <Content Include="Content\wwwroot\scss\_site-navbar.scss" />
-    <Content Include="Content\public\img-01.webp" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -2261,6 +2260,7 @@
     <Content Include="Views\TaiKhoan\Login.cshtml" />
     <Content Include="Views\TaiKhoan\VerifyAccount.cshtml" />
     <Content Include="Views\TaiKhoan\ForgotPassword.cshtml" />
+    <Content Include="Views\KhachHang\InfomationCus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

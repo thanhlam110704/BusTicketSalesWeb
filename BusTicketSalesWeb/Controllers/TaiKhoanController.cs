@@ -15,9 +15,9 @@ namespace BusTicketSalesWeb.Controllers
 {
     public class TaiKhoanController : Controller
     {
-        // GET: TaiKhoan
+       
         public QLBANVEXEEntities3 db = new QLBANVEXEEntities3();
-        // GET: Account
+       
        
 
         public ActionResult Register()
@@ -204,6 +204,11 @@ namespace BusTicketSalesWeb.Controllers
             var admin = db.TaiKhoans.FirstOrDefault(a => a.Email == email && a.VaiTro == 1);
 
             return (admin != null && BCryptNet.Verify(password, admin.MatKhau));
+        }
+
+        public ActionResult InformationCustomer()
+        { 
+            return View();
         }
 
         public ActionResult ForgotPassword()

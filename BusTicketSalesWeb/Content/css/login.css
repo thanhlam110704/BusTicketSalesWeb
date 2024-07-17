@@ -223,7 +223,7 @@ input {
     padding: 6px 30px;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    font-size: 1.2rem;
+    font-size: 18px;
 }
   input::-webkit-input-placeholder {
     color: #999; }

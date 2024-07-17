@@ -1,13 +1,12 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "_Layout";
-    var customer = Session["Customer"] as BusTicketSalesWeb.Models.TaiKhoan;
+    var taikhoan= Session["Customer"] as BusTicketSalesWeb.Models.TaiKhoan;
     var khach = Session["KhachHang"] as BusTicketSalesWeb.Models.KhachHang;
-    if (customer != null)
+    if (taikhoan != null)
     {
         using (var db = new BusTicketSalesWeb.Models.QLBANVEXEEntities3())
         {
-            khach = db.KhachHangs.FirstOrDefault(k => k.Id == customer.Id);
+            khach = db.KhachHangs.FirstOrDefault(k => k.Id == taikhoan.Id);
         }
     }
 
@@ -108,25 +107,25 @@
                         <a class="nav-link" href="/Home/Index">Trang chủ</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Access/Register">Liên hệ</a>
-                    </li>
-                    @if (customer != null && khach != null)
+                    @if (taikhoan != null && khach != null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Đơn hàng của tôi</a>
+                            <a class="nav-link" href="#">Lịch sử đặt vé</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Chào, @khach.TenKH</a>
+                            <a class="nav-link" href="@Url.Action("InfomationCus", "KhachHang", new { account_Id = taikhoan.Id })">
+                                Chào, @khach.TenKH
+                            </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" onclick="document.getElementById('logoutForm').submit();" style="cursor: pointer">
                                 Đăng xuất
                             </a>
                         </li>
+
                         <form id="logoutForm" action="@Url.Action("Logout", "TaiKhoan")" method="post">
                             @Html.AntiForgeryToken()
-
                         </form>
 
                     }
