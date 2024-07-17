@@ -1,0 +1,443 @@
+﻿@*@using DO_AN.ViewModel.Paging;
+    @model TrainListViewModel*@
+@model BusTicketSalesWeb.ViewModels.SearchViewModel
+
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style>
+    .filter-title p {
+        margin-bottom: 0;
+    }
+
+    .form-select {
+        color: gray; /* Default text color for selects */
+    }
+
+        .form-select option {
+            color: black; /* Customize option text color if necessary */
+        }
+
+    .pagination a {
+        padding: 5px 10px;
+        text-decoration: none;
+        border: 1px solid #ccc;
+        margin: 0 2px;
+        color: #000
+    }
+
+        .pagination a.active {
+            background-color: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
+
+    .ticket-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .ticket {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .ticket:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+    .ticket-info h5 {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .ticket-info p {
+        margin: 5px 0;
+    }
+
+    .highlight {
+        color: #000;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .ticket-actions {
+        margin-top: 15px;
+    }
+
+        .ticket-actions a {
+            width: 100%;
+        }
+
+    .highlight-location {
+        font-size: 1.4em;
+        color: #28a745;
+        font-weight: bold;
+    }
+
+    .highlight-price {
+        font-size: 1.4em;
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    .autocomplete-suggestions {
+        position: absolute;
+        z-index: 1000;
+        width: 226px; /* Để gợi ý chiếm full width ô nhập, trừ đi viền 1px từ hai bên */
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px; /* Bo tròn gợi ý */
+        /* margin-top: 5px; */ /* Khoảng cách với ô nhập */
+    }
+
+    .autocomplete-item {
+        padding: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .autocomplete-item:hover {
+            background: #f0f0f0;
+        }
+
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .filter-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter-group {
+        margin-bottom: 1rem;
+    }
+
+        .filter-group input {
+            height: 24px;
+        }
+
+    .expand-icon {
+        cursor: pointer;
+    }
+
+    /* Custom styles */
+    .ticket-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .ticket {
+        background-color: #ffffff;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .ticket-info {
+        margin-bottom: 10px;
+    }
+
+    .ticket-actions {
+        margin-top: 15px;
+    }
+
+
+
+    .search-form {
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .search-form input[type=text],
+        .search-form input[type=date] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .search-form button[type=submit] {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0d6efd;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            .search-form button[type=submit]:hover {
+                background-color: #0d6efd;
+            }
+
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 0
+    }
+
+    .btn-link {
+        color: #0d6efd
+    }
+
+    .btn-primary {
+        background-color: #0d6efd;
+        border: none;
+        color: white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 12px 25px;
+        border-radius: 5px;
+        margin-top: 5px; /* Khoảng cách với ô nhập */
+    }
+
+        .btn-primary:hover {
+            background-color: #0d6efd;
+            color: #ffffff;
+        }
+</style>
+@*  search .... *@
+<div class="container" style="width: 900px; margin-top: 20px; padding: 0;">
+    <div class="row justify-content-center">
+        <div class="search-form">
+            <h4 style="margin: 10px 10px 20px 25px;font-weight:500">Cung cấp thông tin cần tìm</h4>
+            <!--search form-->
+            <form id="searchForm" style="width: auto;" method="post" action="@Url.Action("Search", "Search")">
+                <div style="display:flex; gap:20px;justify-content:center; align-items:center">
+                    <div class="col-lg-3">
+                        <input type="text" style="margin-bottom:5px" class="form-control" id="noiDi" name="noiDi" placeholder="Nơi đi" autocomplete="off" value="@Model.NoiDi">
+                        <div id="noiDiSuggestions" class="autocomplete-suggestions"></div>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="text" style="margin-bottom:5px" class="form-control" id="noiDen" name="noiDen" placeholder="Nơi đến" autocomplete="off" value="@Model.NoiDen">
+                        <div id="noiDenSuggestions" class="autocomplete-suggestions"></div>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="date" style="margin-bottom:5px" class="form-control" id="ngayKhoiHanh" name="ngayKhoiHanh" placeholder="Ngày khởi hành" autocomplete="off" value="@Model.NgayKhoiHanh?.ToString(" yyyy-MM-dd")">
+                    </div>
+                    <div>
+                        <button type="submit" style="margin-bottom:5px; margin-top:0px" class="btn btn-primary">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container row" style="margin-left:auto;margin-right:auto;width:924px;padding:0">
+    @*   bộ lọc  *@
+    <div class="col-12 col-md-4" style="margin-top: 1rem; width: 300px; padding-left: 0;">
+        <div id="route-fixed-left" class="position-relative">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="mb-0">Sắp xếp</h5>
+                </div>
+                <!-- Sorting options -->
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort" id="default" value="default" checked>
+                        <label class="form-check-label" for="default">Mặc định</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort" id="earliest" value="time:asc">
+                        <label class="form-check-label" for="earliest">Giờ đi sớm nhất</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort" id="latest" value="time:desc">
+                        <label class="form-check-label" for="latest">Giờ đi muộn nhất</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort" id="asc" value="fare:asc">
+                        <label class="form-check-label" for="asc">Giá tăng dần</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sort" id="desc" value="fare:desc">
+                        <label class="form-check-label" for="desc">Giá giảm dần</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Filtering  -->
+            <div class="card mb-3">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Lọc</h5>
+                    <button class="btn btn-link" onclick="clearFilters()">Xóa lọc</button>
+                </div>
+                <div class="card-body">
+                    <form id="filterForm" asp-controller="Train" asp-action="SearchTrain" method="get" style="width:auto">
+                        <div class="filter-group mt-3">
+                            <div class="filter-title">
+                                <p>Nơi đi</p>
+                            </div>
+                            <select class="form-select" id="startRoute" name="noiDi" onchange="submitFilterForm()">
+                                <option value="" selected>Mặc Định</option>
+                                @*@foreach (var route in Model.TrainRoutes)
+                                    {
+                                        <option value="@route.PointStart">@route.PointStart</option>
+                                    }*@
+                            </select>
+                        </div>
+
+                        <div class="filter-group mt-3">
+                            <div class="filter-title">
+                                <p>Nơi đến</p>
+                            </div>
+                            <select class="form-select" id="endRoute" name="noiDen" onchange="submitFilterForm()">
+                                <option value="" selected>Mặc Định</option>
+                                @*@foreach (var route in Model.TrainRoutes)
+                                    {
+                                        <option value="@route.PointEnd">@route.PointEnd</option>
+                                    }*@
+                            </select>
+                        </div>
+                        <div class="filter-group mt-3">
+                            <div class="filter-title">
+                                <p>Loại xe</p>
+                            </div>
+                            <select class="form-select" id="vehicleType" name="vehicleType" onchange="submitFilterForm()">
+                                <option value="" selected>Mặc Định</option>
+                                <!-- Add options dynamically if needed -->
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary" style="width: 100%; ">
+                            Lọc
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* danh sách vé  *@
+    <div class="col-12 col-md-8" style="padding-right:0px">
+        <div class="container mt-5" style="margin-top:3rem; padding-right:0px">
+            <div class="row">
+                <div id="searchResults">
+                    @Html.Partial("SearchResults", Model)
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const createAutocomplete = (inputId, suggestionsId, apiEndpoint) => {
+                const input = document.getElementById(inputId);
+                const suggestions = document.getElementById(suggestionsId);
+
+                input.addEventListener("input", async function () {
+                    const term = input.value;
+
+                    const response = await fetch(`/api/Train/${apiEndpoint}?term=${term}`);
+                    const data = await response.json();
+
+                    suggestions.innerHTML = data.map(item => `<div class="autocomplete-item">${item}</div>`).join("");
+
+                    suggestions.querySelectorAll('.autocomplete-item').forEach(item => {
+                        item.addEventListener("click", function () {
+                            input.value = this.textContent;
+                            suggestions.innerHTML = "";
+                        });
+                    });
+                });
+
+                document.addEventListener("click", function (e) {
+                    if (!input.contains(e.target) && !suggestions.contains(e.target)) {
+                        suggestions.innerHTML = "";
+                    }
+                });
+            };
+
+            createAutocomplete("noiDi", "noiDiSuggestions", "GetStartPoints");
+            createAutocomplete("noiDen", "noiDenSuggestions", "GetEndPoints");
+        });
+        function validateForm() {
+            const noiDi = document.getElementById('noiDi').value;
+            const noiDen = document.getElementById('noiDen').value;
+
+            // Validate at least one of noiDi or noiDen is not empty
+            if (noiDi.trim() === '' && noiDen.trim() === '') {
+                alert('Vui lòng nhập ít nhất một trong các trường Nơi đi hoặc Nơi đến');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('input[type=radio][name=sort]').change(function () {
+            var sortValue = $(this).val();
+            // Gửi yêu cầu AJAX với sortValue
+            $.ajax({
+                url: '/Search/SearchTrain',
+                type: 'GET',
+                data: {
+                    noiDi: $('#noiDi').val(),
+                    noiDen: $('#noiDen').val(),
+                    ngayKhoiHanh: $('#ngayKhoiHanh').val(),
+                    sort: sortValue,
+                    page: 1  // Reset lại page về trang đầu tiên khi thay đổi sort
+                },
+                success: function (response) {
+                    $('#searchResults').html(response);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+
+    </script>
+    <script>
+        $(function () {
+            // Thêm đoạn script để xử lý tìm kiếm không đồng bộ
+            $("#searchForm").submit(function (event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        $("#searchResults").html(result);
+                    }
+                });
+            });
+        });
+    </script>
+
+}

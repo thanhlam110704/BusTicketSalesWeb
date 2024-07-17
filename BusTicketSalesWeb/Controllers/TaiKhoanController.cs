@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using BCryptNet = BCrypt.Net.BCrypt;
-using System.Security.Principal;
-using System.Web.Helpers;
+
 using BusTicketSalesWeb.Models;
 
 namespace BusTicketSalesWeb.Controllers
@@ -16,7 +13,7 @@ namespace BusTicketSalesWeb.Controllers
     public class TaiKhoanController : Controller
     {
         // GET: TaiKhoan
-        public QLBANVEXEEntities3 db = new QLBANVEXEEntities3();
+        public QLBANVEXEEntities5 db = new QLBANVEXEEntities5();
         // GET: Account
        
 

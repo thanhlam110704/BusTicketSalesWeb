@@ -5,12 +5,11 @@
     var khach = Session["KhachHang"] as BusTicketSalesWeb.Models.KhachHang;
     if (customer != null)
     {
-        using (var db = new BusTicketSalesWeb.Models.QLBANVEXEEntities3())
+        using (var db = new BusTicketSalesWeb.Models.QLBANVEXEEntities5())
         {
             khach = db.KhachHangs.FirstOrDefault(k => k.Id == customer.Id);
         }
     }
-
 }
 <!DOCTYPE html>
 <html>
@@ -202,6 +201,7 @@
     </footer>
     <script src="~/lib/bootstrap/js/bootstrap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
 
 </body>
 </html>

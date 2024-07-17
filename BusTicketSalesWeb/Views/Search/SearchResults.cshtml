@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "SearchResults";
+    Layout = "~/Views/Shared/_PartialPage.cshtml";
+}
+
+@model BusTicketSalesWeb.ViewModels.SearchViewModel
+
+
+<div class="results-container">
+    <div class="ticket-container">
+        <!-- Kiểm tra nếu không có kết quả -->
+        @if (Model.IsNotFound)
+        {
+            <p style=" font-size: 28px; font-weight: 400;">Không tìm thấy chuyến xe phù hợp.</p>
+        }
+        else
+        {
+            <!-- Ticket list -->
+            foreach (var xeKhach in Model.ChuyenXes)
+            {
+                <div class="ticket" style="max-width:none">
+                    <div class="d-flex justify-content-between">
+                        <div class="ticket-info" style="width:400px">
+                            <h5>Chuyến xe số @xeKhach.MaChuyen</h5>
+                            <div class="d-flex justify-content-between">
+                                <h4 class="highlight-location">@xeKhach.TuyenXe.NoiDi - @xeKhach.TuyenXe.NoiDen</h4>
+                            </div>
+                            <p style="margin:0px"><strong>Ngày khởi hành:</strong> @xeKhach.NgayGioKhoiHanh</p>
+                            <p style="margin:0px; font-size:14px;">Mecsedec 45 chỗ</p>
+                        </div>
+                        <div class="ticket-price" style="align-content:center">
+                            <h4 class="highlight-price">100000 VND</h4>
+                        </div>
+                    </div>
+                    <div class="ticket-actions" style="text-align:right;margin:0px">
+                        <a href="@Url.Action("Index", "Order", new {  idCoach = "XE001" })" class="btn btn-success" style="width:150px">Đặt vé</a>
+                    </div>
+                </div>
+            }
+
+            <!-- Pagination -->
+            if (Model.PagingInfo != null && Model.PagingInfo.TotalPages > 1)
+            {
+                <div class="pagination mt-4" style="margin:auto">
+                    @for (int i = 1; i <= Model.PagingInfo.TotalPages; i++)
+                    {
+                        <a href="@Url.Action("SearchTrain", "Search", new { page = i, noiDi = Model.NoiDi, noiDen = Model.NoiDen, ngayKhoiHanh = Model.NgayKhoiHanh?.ToString("yyyy-MM-dd") })"
+                           class="@(i == Model.PagingInfo.CurrentPage ? "active" : "")">
+                            @i
+                        </a>
+                    }
+                </div>
+            }
+
+        }
+    </div>
+</div>
+
+

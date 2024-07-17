@@ -23,8 +23,8 @@ namespace BusTicketSalesWeb.Models
         public string MaHoaDon { get; set; }
         public Nullable<System.DateTime> NgayGioTaoHoaDon { get; set; }
         public Nullable<int> TongTien { get; set; }
-        public int MaNV { get; set; }
-        public int MaKH { get; set; }
+        public string MaNV { get; set; }
+        public string MaKH { get; set; }
         public string MaCT { get; set; }
     
         public virtual ChuongTrinhKhuyenMai ChuongTrinhKhuyenMai { get; set; }

@@ -21,7 +21,8 @@ namespace BusTicketSalesWeb.Models
         }
     
         public string MaTuyen { get; set; }
-        public string TenTuyen { get; set; }
+        public string NoiDi { get; set; }
+        public string NoiDen { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChuyenXe> ChuyenXes { get; set; }

@@ -7,15 +7,12 @@
 
 </head>
 <body>
-
-
-
     <div class="leader-board">
         <div class="background-images">
-            <img src="../Content/public/leaderboard-1@2x.png" alt="Image 1">
-            <img src="../Content/public/banner1.png" alt="Image 2">
-            <img src="../Content/public/leaderboard-1@2x.png" alt="Image 3">
-            <img src="../Content/public/banner1.png" alt="Image 4">
+            <img src="../Content/public/leaderboard-1@2x.png" class="banner-image active" alt="Image 1">
+            <img src="../Content/public/banner1.png" class="banner-image" alt="Image 2">
+            <img src="../Content/public/leaderboard-1@2x.png" class="banner-image" alt="Image 3">
+            <img src="../Content/public/banner1.png" class="banner-image" alt="Image 4">
         </div>
         <div class="title">
             Vexere - Cam kết hoàn 150% nếu nhà xe không cung cấp dịch vụ vận chuyển
@@ -42,9 +39,7 @@
                             </select>
                         </div>
                         <div class="col-2 btn btn-warning" style="height:50px;margin-top:22px;align-content:center;border-radius:10px">
-                            <div class="timve">
-                                Tìm kiếm
-                            </div>
+                            <a class="timve" style="text-decoration:none;color:white;font-size:14px;font-weight:300" href="@Url.Action("SearchTrain", "Search")">    Tìm kiếm</a>
                         </div>
                     </div>
                 </div>
@@ -262,5 +257,12 @@
     </div>
     <br />
     <br />
+
+
+    <script>
+        // script.js
+
+
+    </script>
 </body>
 </html>

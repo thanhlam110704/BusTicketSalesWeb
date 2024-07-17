@@ -14,6 +14,11 @@ namespace BusTicketSalesWeb
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+            name: "SearchTrain",
+            url: "Train/SearchTrain",
+            defaults: new { controller = "Search", action = "SearchTrain" }
+        );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

@@ -15,10 +15,10 @@ namespace BusTicketSalesWeb.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class QLBANVEXEEntities3 : DbContext
+    public partial class QLBANVEXEEntities5 : DbContext
     {
-        public QLBANVEXEEntities3()
-            : base("name=QLBANVEXEEntities3")
+        public QLBANVEXEEntities5()
+            : base("name=QLBANVEXEEntities5")
         {
         }
     
@@ -76,20 +76,20 @@ namespace BusTicketSalesWeb.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_DeleteHoaDon", maHoaDonParameter);
         }
     
-        public virtual int sp_DeleteKhachHang(Nullable<int> maKH)
+        public virtual int sp_DeleteKhachHang(string maKH)
         {
-            var maKHParameter = maKH.HasValue ?
+            var maKHParameter = maKH != null ?
                 new ObjectParameter("MaKH", maKH) :
-                new ObjectParameter("MaKH", typeof(int));
+                new ObjectParameter("MaKH", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_DeleteKhachHang", maKHParameter);
         }
     
-        public virtual int sp_DeleteNhanVien(Nullable<int> maNV)
+        public virtual int sp_DeleteNhanVien(string maNV)
         {
-            var maNVParameter = maNV.HasValue ?
+            var maNVParameter = maNV != null ?
                 new ObjectParameter("MaNV", maNV) :
-                new ObjectParameter("MaNV", typeof(int));
+                new ObjectParameter("MaNV", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_DeleteNhanVien", maNVParameter);
         }
@@ -223,7 +223,7 @@ namespace BusTicketSalesWeb.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertGhe", maGheParameter, tenGheParameter, trangThaiParameter, maXeParameter);
         }
     
-        public virtual int sp_InsertHoaDon(string maHoaDon, Nullable<System.DateTime> ngayGioTaoHoaDon, Nullable<int> tongTien, Nullable<int> maNV, Nullable<int> maKH, string maCT)
+        public virtual int sp_InsertHoaDon(string maHoaDon, Nullable<System.DateTime> ngayGioTaoHoaDon, Nullable<int> tongTien, string maNV, string maKH, string maCT)
         {
             var maHoaDonParameter = maHoaDon != null ?
                 new ObjectParameter("MaHoaDon", maHoaDon) :
@@ -237,13 +237,13 @@ namespace BusTicketSalesWeb.Models
                 new ObjectParameter("TongTien", tongTien) :
                 new ObjectParameter("TongTien", typeof(int));
     
-            var maNVParameter = maNV.HasValue ?
+            var maNVParameter = maNV != null ?
                 new ObjectParameter("MaNV", maNV) :
-                new ObjectParameter("MaNV", typeof(int));
+                new ObjectParameter("MaNV", typeof(string));
     
-            var maKHParameter = maKH.HasValue ?
+            var maKHParameter = maKH != null ?
                 new ObjectParameter("MaKH", maKH) :
-                new ObjectParameter("MaKH", typeof(int));
+                new ObjectParameter("MaKH", typeof(string));
     
             var maCTParameter = maCT != null ?
                 new ObjectParameter("MaCT", maCT) :
@@ -252,11 +252,11 @@ namespace BusTicketSalesWeb.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertHoaDon", maHoaDonParameter, ngayGioTaoHoaDonParameter, tongTienParameter, maNVParameter, maKHParameter, maCTParameter);
         }
     
-        public virtual int sp_InsertKhachHang(Nullable<int> maKH, string tenKH, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, Nullable<int> id)
+        public virtual int sp_InsertKhachHang(string maKH, string tenKH, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, Nullable<int> id)
         {
-            var maKHParameter = maKH.HasValue ?
+            var maKHParameter = maKH != null ?
                 new ObjectParameter("MaKH", maKH) :
-                new ObjectParameter("MaKH", typeof(int));
+                new ObjectParameter("MaKH", typeof(string));
     
             var tenKHParameter = tenKH != null ?
                 new ObjectParameter("TenKH", tenKH) :
@@ -277,11 +277,11 @@ namespace BusTicketSalesWeb.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertKhachHang", maKHParameter, tenKHParameter, gioi_TinhParameter, ngay_SinhParameter, idParameter);
         }
     
-        public virtual int sp_InsertNhanVien(Nullable<int> maNV, string tenNV, string chucVu, Nullable<System.DateTime> ngayVaoLam, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, string maPB, Nullable<int> id)
+        public virtual int sp_InsertNhanVien(string maNV, string tenNV, string chucVu, Nullable<System.DateTime> ngayVaoLam, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, string maPB, Nullable<int> id)
         {
-            var maNVParameter = maNV.HasValue ?
+            var maNVParameter = maNV != null ?
                 new ObjectParameter("MaNV", maNV) :
-                new ObjectParameter("MaNV", typeof(int));
+                new ObjectParameter("MaNV", typeof(string));
     
             var tenNVParameter = tenNV != null ?
                 new ObjectParameter("TenNV", tenNV) :
@@ -503,7 +503,7 @@ namespace BusTicketSalesWeb.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_UpdateGhe", maGheParameter, tenGheParameter, trangThaiParameter, maXeParameter);
         }
     
-        public virtual int sp_UpdateHoaDon(string maHoaDon, Nullable<System.DateTime> ngayGioTaoHoaDon, Nullable<int> tongTien, Nullable<int> maNV, Nullable<int> maKH, string maCT)
+        public virtual int sp_UpdateHoaDon(string maHoaDon, Nullable<System.DateTime> ngayGioTaoHoaDon, Nullable<int> tongTien, string maNV, string maKH, string maCT)
         {
             var maHoaDonParameter = maHoaDon != null ?
                 new ObjectParameter("MaHoaDon", maHoaDon) :
@@ -517,13 +517,13 @@ namespace BusTicketSalesWeb.Models
                 new ObjectParameter("TongTien", tongTien) :
                 new ObjectParameter("TongTien", typeof(int));
     
-            var maNVParameter = maNV.HasValue ?
+            var maNVParameter = maNV != null ?
                 new ObjectParameter("MaNV", maNV) :
-                new ObjectParameter("MaNV", typeof(int));
+                new ObjectParameter("MaNV", typeof(string));
     
-            var maKHParameter = maKH.HasValue ?
+            var maKHParameter = maKH != null ?
                 new ObjectParameter("MaKH", maKH) :
-                new ObjectParameter("MaKH", typeof(int));
+                new ObjectParameter("MaKH", typeof(string));
     
             var maCTParameter = maCT != null ?
                 new ObjectParameter("MaCT", maCT) :
@@ -532,11 +532,11 @@ namespace BusTicketSalesWeb.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_UpdateHoaDon", maHoaDonParameter, ngayGioTaoHoaDonParameter, tongTienParameter, maNVParameter, maKHParameter, maCTParameter);
         }
     
-        public virtual int sp_UpdateKhachHang(Nullable<int> maKH, string tenKH, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, Nullable<int> id)
+        public virtual int sp_UpdateKhachHang(string maKH, string tenKH, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, Nullable<int> id)
         {
-            var maKHParameter = maKH.HasValue ?
+            var maKHParameter = maKH != null ?
                 new ObjectParameter("MaKH", maKH) :
-                new ObjectParameter("MaKH", typeof(int));
+                new ObjectParameter("MaKH", typeof(string));
     
             var tenKHParameter = tenKH != null ?
                 new ObjectParameter("TenKH", tenKH) :
@@ -557,11 +557,11 @@ namespace BusTicketSalesWeb.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_UpdateKhachHang", maKHParameter, tenKHParameter, gioi_TinhParameter, ngay_SinhParameter, idParameter);
         }
     
-        public virtual int sp_UpdateNhanVien(Nullable<int> maNV, string tenNV, string chucVu, Nullable<System.DateTime> ngayVaoLam, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, string maPB, Nullable<int> id)
+        public virtual int sp_UpdateNhanVien(string maNV, string tenNV, string chucVu, Nullable<System.DateTime> ngayVaoLam, Nullable<byte> gioi_Tinh, Nullable<System.DateTime> ngay_Sinh, string maPB, Nullable<int> id)
         {
-            var maNVParameter = maNV.HasValue ?
+            var maNVParameter = maNV != null ?
                 new ObjectParameter("MaNV", maNV) :
-                new ObjectParameter("MaNV", typeof(int));
+                new ObjectParameter("MaNV", typeof(string));
     
             var tenNVParameter = tenNV != null ?
                 new ObjectParameter("TenNV", tenNV) :

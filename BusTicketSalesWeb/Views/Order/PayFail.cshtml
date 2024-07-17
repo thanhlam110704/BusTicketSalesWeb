@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "PayFail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .failure-container {
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        width: 35%;
+        padding: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .failure-icon {
+        font-size: 4em;
+        color: #dc3545;
+    }
+
+    .btn-home {
+        margin-top: 20px;
+    }
+</style>
+<div style="display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh">
+    <div class="failure-container">
+        <div class="failure-icon">
+            <i class="bi bi-x-circle-fill"></i>
+        </div>
+        <h3 class="text-danger">Thanh toán thất bại</h3>
+        <p class="text-muted">Rất tiếc, đã xảy ra lỗi trong quá trình thanh toán. Vui lòng thử lại.</p>
+        <a href="/" class="btn btn-primary btn-home">Quay về trang chủ</a>
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.js"></script>
+
+
+
