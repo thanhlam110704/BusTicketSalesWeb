@@ -12,7 +12,7 @@ namespace BusTicketSalesWeb.Controllers
 {
     public class KhachHangController : Controller
     {
-        public QLBANVEXEEntities3 db = new QLBANVEXEEntities3();
+        public QLBANVEXEEntities6 db = new QLBANVEXEEntities3();
 
         // Phương thức để hiển thị thông tin khách hàng
         [HttpGet]

@@ -4,7 +4,7 @@
     var khach = Session["KhachHang"] as BusTicketSalesWeb.Models.KhachHang;
     if (taikhoan != null)
     {
-        using (var db = new BusTicketSalesWeb.Models.QLBANVEXEEntities5())
+        using (var db = new BusTicketSalesWeb.Models.QLBANVEXEEntities6())
         {
             khach = db.KhachHangs.FirstOrDefault(k => k.Id == taikhoan.Id);
         }

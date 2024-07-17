@@ -13,7 +13,7 @@ namespace BusTicketSalesWeb.Controllers
 
         public SearchController()
         {
-            _context = new QLBANVEXEEntities5(); // Đảm bảo tên context phù hợp với tên bạn đã đặt trong Entity Framework
+            _context = new QLBANVEXEEntities6(); // Đảm bảo tên context phù hợp với tên bạn đã đặt trong Entity Framework
         }
 
         [HttpPost]

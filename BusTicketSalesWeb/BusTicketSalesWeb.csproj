@@ -323,10 +323,7 @@
     </Compile>
     <Compile Include="ViewModels\BookingViewModel.cs" />
     <Compile Include="ViewModels\CoachViewModel.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="ViewModels\SeatViewModel.cs" />
-    <Compile Include="Controllers\TaiKhoanController.cs" />
-    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2349,13 +2346,6 @@
     <Content Include="Content\wwwroot\scss\_site-base.scss" />
     <Content Include="Content\wwwroot\scss\_site-blocks.scss" />
     <Content Include="Content\wwwroot\scss\_site-navbar.scss" />
-    <EntityDeploy Include="Models\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\admin\Views\ManageCustomer\Customers.cshtml" />
     <Content Include="Areas\admin\Views\ManageCustomer\EditCustomer.cshtml" />
@@ -2371,6 +2361,13 @@
     <Content Include="Areas\admin\Views\ManageTrainRoute\Create.cshtml" />
     <Content Include="Areas\admin\Views\ManageTrainRoute\Edit.cshtml" />
     <Content Include="Areas\admin\Views\ManageTrainRoute\Delete.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2405,7 +2402,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Data\" />
-    <Folder Include="Areas\admin\Views\Shared\" />
     <Folder Include="Views\TrainFilterViewComponent\" />
     <Folder Include="Views\TrainSearchViewComponent\" />
     <Folder Include="Views\Trains\" />
