@@ -20,7 +20,7 @@ namespace BusTicketSalesWeb.Models
             this.HoaDons = new HashSet<HoaDon>();
         }
     
-        public int MaNV { get; set; }
+        public string MaNV { get; set; }
         public string TenNV { get; set; }
         public string ChucVu { get; set; }
         public Nullable<System.DateTime> NgayVaoLam { get; set; }
